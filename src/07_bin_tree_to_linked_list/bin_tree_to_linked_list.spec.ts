@@ -7,7 +7,7 @@ describe('balanced_tree', () => {
     insert(6)
     insert(86)
     insert(10)
-    print()
+    // print()
   })
 
   it('search', () => {
@@ -26,6 +26,6 @@ describe('balanced_tree', () => {
     insert(6)
     insert(13)
     toLinkedList();
-    print();
+    // print();
   })
 })
