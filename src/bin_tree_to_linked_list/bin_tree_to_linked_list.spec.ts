@@ -1,4 +1,4 @@
-import { search, reset, print, insert } from './bin_tree_to_linked_list'
+import { root, search, reset, print, insert } from './bin_tree_to_linked_list'
 import { toLinkedList } from './bin_tree_to_linked_list'
 
 describe('balanced_tree', () => {
@@ -26,6 +26,6 @@ describe('balanced_tree', () => {
     insert(6)
     insert(13)
     toLinkedList();
-    console.log(list)
+    print();
   })
 })

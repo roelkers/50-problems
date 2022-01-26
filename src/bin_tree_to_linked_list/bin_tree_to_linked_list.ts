@@ -6,7 +6,7 @@ interface Item {
   right: Item | null;
 }
 
-let root: Item | null = null;
+export let root: Item | null = null;
 
 export const reset = () => {
   root = null
@@ -94,25 +94,35 @@ interface LLItem {
 
 let list: LLItem | null = null 
 
-const toLinkedListHelper = (list: LLItem | null, item: Item) => {
-  const llItem = { val : item.val , next: null }
-  if(!list) {
-    list = llItem;
-  } else {
-    list.next = llItem;
+const toLinkedListHelper = (item: Item) => {
+  if(item === null) {
+    return
   }
-  if(item.left) {
-    toLinkedListHelper(list, item.left)
+  if(item.left === null || item.right === null) {
+    return
   }
-  if(item.right) {
-    toLinkedListHelper(list, item.right)
+
+  if(item.left !== null) {
+    toLinkedListHelper(item.left)
+
+    const temp = item.right
+    item.right = item.left
+    item.left = null
+    let curr = item.right
+
+    while(curr.right !== null) {
+      curr = curr.right
+    }
+
+    curr.right = temp
   }
+
+  toLinkedListHelper(item.right)
 }
 
-export const toLinkedList = () : null | LLItem => {
+export const toLinkedList = () => {
   if(!root) {
     return null 
   }
-  toLinkedListHelper(list, root)
-  return list
+  toLinkedListHelper(root)
 }
