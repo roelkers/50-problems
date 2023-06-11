@@ -47,11 +47,8 @@ export const deleteFromBinTree = (item: Item) => {
     while(currItem.left) {
       currItem = currItem.left
     }
-    item.value = currItem.value
     deleteFromBinTree(currItem)
-    // currItem.parent = item
-    // currItem.left = item.left
-    // currItem.right = item.right
+    item.value = currItem.value
     return;
   }
   //simple left or righ
