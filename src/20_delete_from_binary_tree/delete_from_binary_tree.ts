@@ -38,6 +38,7 @@ export const deleteFromBinTree = (item: Item) => {
     } else {
       parent.left = null
     }
+    return
   }
   //Complex with two children
   if(item.left && item.right) {
@@ -46,10 +47,12 @@ export const deleteFromBinTree = (item: Item) => {
     while(currItem.left) {
       currItem = currItem.left
     }
+    item.value = currItem.value
     deleteFromBinTree(currItem)
-    currItem.parent = item
-    currItem.left = item.left
-    currItem.right = item.right
+    // currItem.parent = item
+    // currItem.left = item.left
+    // currItem.right = item.right
+    return;
   }
   //simple left or righ
   if(item.left || item.right) {
