@@ -31,3 +31,36 @@ export class QueueInStack {
   } 
 
 }
+
+export class QueueInStack2 {
+  private stack: number[] = new Array(QUEUE_SIZE)
+  private tmpStack: number[] = []
+
+  enqueue(input: number) {
+    let elem: number | undefined
+
+    elem = this.stack.pop()
+    while(elem) {
+      this.tmpStack.push(elem)
+      elem = this.stack.pop()
+    }
+    this.stack.push(input)
+
+    elem = this.tmpStack.pop()
+    while(elem) {
+      this.stack.push(elem)
+      elem = this.tmpStack.pop()
+    }
+  } 
+
+  dequeue() {
+    const item = this.stack.pop()
+    if(!item) {
+      return -1 
+    }
+    return item
+  } 
+}
+
+
+
