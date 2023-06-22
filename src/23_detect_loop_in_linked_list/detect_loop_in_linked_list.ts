@@ -1,3 +1,5 @@
+//https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/
+//
 export interface Item {
   value: number;
   next: Item | null

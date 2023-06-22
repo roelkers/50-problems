@@ -1,3 +1,5 @@
+//https://www.geeksforgeeks.org/deletion-in-binary-search-tree/
+
 export interface Item {
   left: Item | null;
   right: Item | null;

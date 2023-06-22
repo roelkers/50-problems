@@ -1,3 +1,5 @@
+//https://www.geeksforgeeks.org/implement-two-stacks-in-an-array/
+
 import { DoubleStack } from "./two_stacks_in_one_array"
 
 describe('Two Stacks in one array', () => {

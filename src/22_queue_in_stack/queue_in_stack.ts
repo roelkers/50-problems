@@ -1,3 +1,5 @@
+//https://www.geeksforgeeks.org/queue-using-stacks/
+//
 const QUEUE_SIZE = 100
 
 export class QueueInStack {

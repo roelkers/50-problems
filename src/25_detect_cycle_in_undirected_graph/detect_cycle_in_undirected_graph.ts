@@ -1,3 +1,4 @@
+//Solved using DFS
 //https://www.geeksforgeeks.org/detect-cycle-undirected-graph/
 
 export const detectCycleRecursively = (list: number[][], current: number, nextNodes:number[], visited: number[]) => {

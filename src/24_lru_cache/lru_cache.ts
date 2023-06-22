@@ -1,3 +1,6 @@
+//https://www.geeksforgeeks.org/lru-cache-implementation/
+// could be done simpler using array instead of linked list 
+
 export interface ListItem {
   key: number
   value: number,
@@ -40,7 +43,6 @@ export class LRUCache {
   set(key: number, value: number) {
     const item: ListItem = { key, value }
     this.dict[key] = item
-    console.log(this.prioQueueStart)
 
     if(!this.prioQueueStart) {
       this.prioQueueStart = item;
