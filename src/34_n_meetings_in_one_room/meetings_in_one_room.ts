@@ -3,7 +3,6 @@ export const meetingsInOneRoom = (start: number[], end: number[]) => {
   let currentEnd = 0
 
   while(start.length > 0) {
-    console.log(start)
 
     let bestIndex: number | undefined = undefined 
     let bestMeeting: [number,number] | undefined = undefined 
