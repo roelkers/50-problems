@@ -9,6 +9,21 @@
 25-27 graphs
 30-36 backtracking
 17,38-45 dynamic programming
+46-50 array
+
+Techniques
+---------
+
+- Dynamic programming
+- Backtracking
+- Divide and Conquer
+- Sorting
+- Binary Search
+- DFS/BFS
+- Kadanes algorithm
+- Sliding window technique
+- Two pointer technique
+- (Topological search)
 
 Reminders
 ----------
@@ -33,3 +48,11 @@ Indexing can be done by
 (substring-start,substring-end)
 (subarray-start,subarray-end)
 
+(Reduction)
+---------
+
+Np-complete problems:
+- 3-SAT
+- Vertex cover
+- Hamiltanian path
+- Integer partition
